@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(#7f9df8, #a778f8);
+}
+
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 1px 1px 2px rgba(0, 0 0, 0.125);
+  border-radius: 4px;
+}
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #033eec;
+  text-transform: uppercase;
+  text-align: center;
+}
+.wrapper .form {
+  width: 100%;
+  height: auto;
+}
+.wrapper .form .input_field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .input_field .error {
+  color: red;
+}
+.wrapper .form .input_field label {
+  width: 140px;
+  color: #757575;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.wrapper input[type='number']::-webkit-inner-spin-button,
+.wrapper input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.wrapper .form .input_field .input,
+.wrapper .form .input_field .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5d5d5;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.wrapper .form .input_field .textarea {
+  resize: none;
+  height: 100px;
+}
+.form .input_field .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+.custom_select select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #d5dbd9;
+  height: 100%;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 3px;
+  outline: none;
+}
+.wrapper .form .input_field .custom_select::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+.wrapper .form .input_field .input:focus,
+.wrapper .form .textarea:focus,
+.wrapper .form select:focus {
+  border: 1px solid #7091f5;
+}
+.wrapper .input_field .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #7091f5;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+.wrapper .input_field .btn:last-child {
+  margin-bottom: 0;
+}
+.wrapper .input_field .btn:hover {
+  background-color: #5881fc;
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    max-width: 360px;
+  }
+  .wrapper .form .input_field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .input_field label {
+    margin-bottom: 5px;
+  }
+}
